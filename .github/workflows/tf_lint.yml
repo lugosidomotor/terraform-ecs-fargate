@@ -19,11 +19,12 @@ jobs:
     - name: Lint Terraform
       uses: actionshub/terraform-lint@main
     
-    - name: tfsec
+    - name: Run tfsec scan
       uses: aquasecurity/tfsec-action@v1.0.0
       with:
         soft_fail: true
     
-    - name: Run Checkov action
-      id: checkov
+    - name: Run Checkov scan
       uses: bridgecrewio/checkov-action@master
+      with:
+        soft_fail: true
