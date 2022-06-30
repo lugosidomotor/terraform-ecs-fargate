@@ -11,5 +11,10 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@main
+      
+    - name: Scrape
+      run: |
+       terraform fmt -recursive
+      
     - name: Lint Terraform
       uses: actionshub/terraform-lint@main
