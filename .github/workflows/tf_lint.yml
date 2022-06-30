@@ -12,7 +12,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@main
       
-    - name: Scrape
+    - name: Fmt Terraform
       run: |
        terraform fmt -recursive
       
